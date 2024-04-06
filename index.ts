@@ -28,7 +28,7 @@ else if(answer.operator==="Division"){
     console.log(`Invalid input ${answer.num2}`);
 }
 else if(answer.operator==="More Functions"){
-let morefunction=await inquirer.prompt([{message:"More Functions:: ",type:"list",name:"additionalFunctions",choices:["Square","Cube","Square Root","Round off","Factorial","Natural Log","Log base 10"] }
+let morefunction=await inquirer.prompt([{message:"More Functions:: ",type:"list",name:"additionalFunctions",choices:["Square","Cube","Square Root","Round off","Factorial","Natural Log","Log base 10","Back"] }
 ]);
 if(morefunction.additionalFunctions==="Square"){
 let power=await inquirer.prompt([{message: "Enter a Number: ",type: "number",name:"num"}]);
@@ -68,6 +68,9 @@ else if(morefunction.additionalFunctions==="Log base 10"){
     let log10=await inquirer.prompt([{message: "Enter a Number: ",type: "number",name:"num"}]);
     console.log(`Log is: ${Math.log10(log10.num)}`);    
 }
+else if(morefunction.additionalFunctions==="Back"){
+    continue;
+}
 else
 console.log("Invalid Input.!");
 }
@@ -79,3 +82,5 @@ else
 console.log("Invalid Input.!");
 }
 while(keepgoing)
+
+
